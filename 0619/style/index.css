@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+ /*단조(이세계에선 내가 귀족영애?)*/
+@font-face {    
+    font-family: 'Danjo-bold-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*펴진고딕*/
+@font-face {
+    font-family: 'PyeojinGothic-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*페이퍼로지*/
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+* {     /*공통사항*/
+        font-family: 'PyeojinGothic-Bold';
+        box-sizing: border-box; margin: 0;
+    }
+
+    ul { list-style: none; padding: 0; }
+    a {  text-decoration: none; }
+
+
+html{height: 100%;}
+
+body {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+
+#container{     /*전체박스*/
+    width: 100%; max-width: 1200px;
+    margin: auto;
+}
+
+#header{     /*헤더 영역*/
+    width: 100%; height: 50vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#headerVideo{     /*헤더 배경용 영상*/
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%; min-height: 100%;
+}
+
+#headerBox{     /*헤더 타이틀용 박스*/
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: rgba(225, 225, 225, 0.3);
+    backdrop-filter: blur(3px);
+    padding: 1rem; 
+    text-align: right;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#title1{     /*헤더 큰 제목*/
+    font-family: 'Danjo-bold-Regular';
+    font-size: 2.5rem;
+    color: #c02f31;
+    animation: slide-in-blurred-right 1s cubic-bezier(0.190, 1.000, 0.220, 1.000) both;
+}
+
+#title2{     /*헤더 작은 제목*/
+    font-family: 'Paperlogy-8ExtraBold';
+    font-size: 1.5rem;
+    color: #c02f31;
+    animation: slide-in-blurred-right 1s .5s cubic-bezier(0.190, 1.000, 0.220, 1.000) both;
+}
+
+/*타이틀용 애니메이션(animista.net 에서 복사)*/
+@keyframes slide-in-blurred-right {
+  0% {
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 0% 50%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+#navi{     /*내비게이션 영역*/
+    width: 100%; height: 50px;
+    background: #85bcd7;
+}
+
+/*모바일용 햄버거 버튼*/
+#hamburger{
+    width: 50px; line-height: 50px;
+    font-size: 1.5rem;
+    color: #eee;
+    background: #437892;
+    text-align: center;
+    display: none;
+}
+
+
+
+#menu{     /*메뉴박스 ul*/
+    display: flex;
+    justify-content: center;
+}
+
+.main{     /*메인메뉴 리스트*/
+
+}
+
+.mainLink{     /*메인메뉴 링크*/
+    display: block;
+    line-height: 50px; padding: 0 2rem;
+    color: #20475a;
+    transition: .3s;
+}
+
+.mainLink:hover{     /**/
+    background: #437892;
+    color: #fff;
+}
+
+
+#sectionBox{     /*섹션 박스*/
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 1rem;
+    background: #fff;
+}
+
+#sec1, #sec2{     /*왼쪽 섹션*/
+    padding: 1rem;
+}
+
+.sectionTitle{     /*섹션 큰 제목*/
+    font-family: 'Danjo-bold-Regular';
+    font-size: 3rem; color: #c02f31;
+    font-weight: normal;
+}
+
+.smallTitle{     /*섹션 작은 제목*/
+    font-size: 1.5rem; color: #bb4b4c;
+    margin-bottom: 0.5em;
+}
+
+.text{     /*섹션 문장*/
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: justify;     /*양쪽맞춤*/
+}
+
+.text:first-letter{     /*첫글자에 포인트 주는 효과*/
+    font-size: 1.3rem; font-weight: bold;
+    color: #c02f31;
+}
+
+#imageBox{     /**/
+    position: relative; overflow: hidden;
+}
+
+#image{
+    width: 100%; display: block;
+    transition: .3s ease-out;
+}
+
+#button{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #85bcd7;
+    font-size: 1.3rem;
+    padding: 0.3rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s; opacity: 0;
+}
+
+#button:hover{ background: #a8edea; }
+
+#imageBox:hover > #image{
+    transform: scale(1.1);
+    filter: brightness(110%) blur(1.5px);
+}
+
+#imageBox:hover > #button{ opacity: 1; }
+
+#listBox2{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.list2{position: relative;}
+.list2 > img {width: 100%; display: block;}
+
+.duotone{
+    position: absolute; top: 0;
+    opacity: 0; transition: .3s;
+}
+
+.list2:hover > .duotone{opacity: 1;}
+
+
+
+
+#footer{
+    background: #777;
+    padding: 2rem;
+    color: #eee;
+    text-align: center;
+}
+
+
+
+/*850px 이하 화면용 스타일*/
+@media screen and (max-width: 850px){
+    #sectionBox{
+        grid-template-columns: 100%;
+    }
+
+    #listBox2{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*550px 이하 화면용 스타일*/
+@media screen and (max-width: 550px){
+    #navi{
+        position: fixed; top: 0;
+        background: none;
+        z-index: 10;
+    }
+
+    #hamburger{
+        display: block; margin-left: auto;
+    }
+
+    #menu{
+        width: 200px; height: 100ch;
+        background: #437892;
+        margin-left: auto;
+        display: block;
+        transform: translateX(100%); transition: .3s;
+    }
+
+    #menu .mainLink:hover {
+        background: #fff;
+        color: #437892;
+    }
+
+    #hamburger:hover +#menu, #menu:hover{
+        transform: translateX(0); 
+    }
+
+}     /*550px 이하 화면용 스타일 끝*/
+
+/*450px 이하 화면용 스타일*/
+@media screen and (max-width: 450px){
+    .sectionTitle{font-size: 2.5rem;}
+    .smallTitle{font-size: 1.1rem;}
+
+    #headerBox{
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+    }
+    #title1{
+        font-size: 1.7rem;
+    }
+    #title2{
+        font-size: 1.1rem;
+    }
+}

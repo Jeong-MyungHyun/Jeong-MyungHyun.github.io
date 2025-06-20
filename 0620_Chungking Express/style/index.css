@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+/*한겨레결체*/
+@font-face {
+    font-family: 'Hankc';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//fastly.jsdelivr.net/korean-webfonts/1/corps/hani/Hankc/Hankc.woff2') format('woff2'), url('//fastly.jsdelivr.net/korean-webfonts/1/corps/hani/Hankc/Hankc.woff') format('woff');
+}
+
+/*청연체*/
+@font-face {
+    font-family: 'GabiaCheongyeon';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GabiaCheongyeon.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*단조(이세계에선 내가 귀족영애?)*/
+@font-face {
+    font-family: 'Danjo-bold-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {     /*공통사항*/
+        font-family: 'Hankc';
+        box-sizing: border-box; margin: 0;
+    }
+
+    ul { list-style: none; padding: 0; }
+    a {  text-decoration: none; }
+    
+
+html{height: 100%;}
+
+#container{     /*전체박스*/
+    width: 100%; max-width: 1200px;
+    margin: auto;
+}
+
+#header{     /*헤더 영역*/
+    width: 100%; height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#headerVideo{     /*헤더 배경용 영상*/
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%; min-height: 100%;
+}
+
+#headerBox{     /*헤더 타이틀용 박스*/
+    position: absolute;
+    top: 0.1rem; left: .1rem;
+    scale: 0.3;
+    text-align: right;
+    overflow: hidden;
+}
+
+#navi{     /*내비게이션 영역*/
+    width: 100%; height: 50px;
+    background: #FFD166
+}
+#menu{     /*메뉴박스 ul*/
+    display: flex;
+    justify-content: center;
+}
+
+.main{     /*메인메뉴 리스트*/
+
+}
+
+.mainLink{     /*메인메뉴 링크*/
+    display: block;
+    line-height: 50px; padding: 0 2rem;
+    color: #3E3E3E;
+    transition: .5s;
+}
+
+.mainLink:hover{     /**/
+    background: #3E3E3E;
+    color: #fff;
+}
+
+     /*섹션 영역*/
+    #contents {     /*섹션 영역*/
+        background-color: #faeabf;
+        padding: 1em;
+    }
+
+    #sectionTitle {    /*섹션 제목*/
+        font-family: 'Danjo-bold-Regular';
+        background-color: #171286;
+        color: #fff;
+        font-size: 1.5em;
+        padding: 0.4em 1em;
+        margin-bottom: 0.5em;
+        box-shadow: 5px 5px 0 rgba(0,0,0,0.7);   /*그림자 효과*/
+        display: inline-block;   /*내용 만큼의 폭으로 만들기*/
+    }
+        
+    .text {     /*섹션 본문 내용들*/
+        font-family: 'Hankc';
+        font-size: 1.1em;
+        text-align: justify;
+        line-height: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    .smallTitle {    /*소제목 문자*/
+        font-family: 'Danjo-bold-Regular';
+        background-color: #171286;
+        color: #fff;
+        font-size: 1.5em;
+        padding: 0.4em 1em;
+        margin-bottom: 1em;
+        box-shadow: 5px 5px 0 rgba(0,0,0,0.7);   /*그림자 효과*/
+        display: inline-block;   /*내용 만큼의 폭으로 만들기*/
+    }
+
+
+    .galleryBox {     /*사진,영상 리스트 박스 ul*/
+        list-style: none;  padding: 0;
+        display: grid;    /*바둑판 배치*/
+        grid-template-columns: repeat(4, 1fr) ; 
+        gap: 20px;
+    }
+
+    .list {      /*각 리스트*/
+        position: relative;
+        overflow: hidden;
+    }
+
+
+
+        .thumb:hover {  transform: scale(1.05); filter: grayscale(100%);}
+        .thumb { transition: 0.3s; }
+
+        .thumb, .video {      /*리스트 이미지,영상*/
+            width: 100%;     /*공간의 폭에 맞추기*/
+            display: block;    /*공간의 세로 폭에 채우기*/
+        }
+
+        
+    .smallTitle2 {    /*소제목 문자*/
+        font-family: 'Danjo-bold-Regular';
+        background-color: #171286;
+        color: #fff;
+        font-size: 1.5em;
+        padding: 0.4em 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        box-shadow: 5px 5px 0 rgba(0,0,0,0.7);   /*그림자 효과*/
+        display: inline-block;   /*내용 만큼의 폭으로 만들기*/
+    }
+
+    
+    .galleryBox2 {     /*사진,영상 리스트 박스 ul*/
+        list-style: none;  padding: 0;
+        display: grid;    /*바둑판 배치*/
+        grid-template-columns: repeat(3, 1fr) ; 
+        gap: 20px;
+    }
+
+    /* 푸터(꼬릿말) 영역 */
+    #footer {
+        background-color: #555;
+        color: #ddd;
+        padding: 2em;
+        line-height: 1.6em;
+        text-align: center;
+    }

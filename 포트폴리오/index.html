@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- 네이버 웹폰트 연결(나눔스퀘어 네오) -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
+
+    <!--폰트어썸 연결-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--외부 스타일 파일 연결(link)-->
+    <link rel="stylesheet" href="style/index.css">
+
+    <!--파비콘(Favicon)-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+<div id="navBox">     <!--상단 고정 내비게이션 전체 박스-->
+
+    <div id="navBox2">     <!--안쪽 1200 박스(로고, 메뉴)-->
+
+        <div id="logoBox">
+            
+            <a href="index.html"><img src="images/logo.png" alt="로고이미지"></a>
+        </div>
+
+        <nav id="navi">
+            <ul id="menu">
+                <li class="main"><a href="#">홈</a></li>
+                <li class="main"><a href="#">관광지소개</a></li>
+                <li class="main"><a href="#">여행코스</a></li>
+                <li class="main"><a href="#">여행정보</a></li>
+                <li class="main"><a href="#">나만의 광주 뽐내기</a></li>
+            </ul>
+        </nav>
+
+    </div>     <!--안쪽 1200 박스(로고, 메뉴)-->
+
+
+</div>
+
+
+<header id="header">     <!--헤더 영역-->
+    <img src="images/header.png" alt="헤더 이미지" id="headerimage">
+
+    <div id="headerBox">     <!--헤더 내부 박스-->
+
+    </div>
+
+</header>
+
+
+<section id="sec1">
+    <h2 class="sectionTitle1">광주의 관광지 소개</h2>
+    <p class="sectionTitle2">문화도시 광주의 다양한 매력에 빠져보세요.</p>
+    <img src="images/list.png" alt="관광리스트" id="list">
+
+</section>
+
+<section id="sec2">
+    <h2 class="sectionTitle1">여행코스</h2>
+    <p class="sectionTitle2">이대로만 간다면 나도 이제 광주인</p>
+
+
+    <ul class="listBox2">
+        <li class="list2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.538505204632!2d126.88653067635158!3d35.16812855798868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35718c14f294bb77%3A0xbc5fee689590c5ee!2z6rSR7KO86riw7JWE7LGU7ZS87Ja47Iqk7ZWE65Oc!5e0!3m2!1sko!2skr!4v1749792755160!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </li>
+        <li class="list">
+            <h3>광주기아챔피언스필드</h3>
+            <p>광주광역시 북구 서림로 10</p>
+            <p>기아팬이라면 꼭 방문해야 할 야구경기장</p>
+            <a href="#" class="readMore">READ MORE</a>
+        </li>
+    </ul>
+
+    <ul class="listBox2">
+        <li class="list2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.39349623964!2d126.83793387635104!3d35.146805959145354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3571891688afcf47%3A0x3104edb41cd7cf1d!2z6rmA64yA7KSR7Luo67Kk7IWY7IS87YSw!5e0!3m2!1sko!2skr!4v1749793266233!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </li>
+        <li class="list2">
+            <h3>김대중컨벤션센터</h3>
+            <p>광주광역시 서구 상무누리로 30</p>
+            <p>다양한 페어가 펼쳐지는 복합문화공간</p>
+            <a href="#" class="readMore">READ MORE</a>
+        </li>
+    </ul>
+</section>
+
+<section id="sec3">
+    <h2 class="sectionTitle1">여행정보</h2>
+    <p class="sectionTitle2">광주에서 진행 예정인 축제나 페어를 알려드립니다.</p>
+    <img src="images/sec3.png" alt="" id="sec3">
+</section>
+
+<section id="sec4">
+    <h2 class="sectionTitle1">나만의 광주 뽐내기</h2>
+    <p class="sectionTitle2">자신만 알고 있는 광주의 명소를 뽐내주세요.</p>
+
+    <li class="list5">     <!--오른쪽 입력 양식-->
+                <h3>DROP A MESSAGE</h3>
+                <form>
+                    <input type="text" name="name" class="input1" placeholder="이름" required autocomplete="off">
+                    <input type="password" name="pass" class="input1" placeholder="비밀번호" required autocomplete="off">
+                    <select name="select" class="input1"required autocomplete="off">
+                        <option value="0">어떤 종류를 추천하고 싶은가요?</option>
+                        <option value="1">관광명소</option>
+                        <option value="2">맛집소개</option>
+                    </select>
+
+                    <input type="text" name="subject" class="input1" placeholder="Subject" required autocomplete="off">
+                    <input type="text" name="email" class="input1" placeholder="E-mail" required>
+                    <textarea name="message" class="input1 input2" placeholder="Message here" required></textarea>
+                    <input type="radio" name="accept" required>개인정보 수집 동의
+
+                    <input type="submit" value="S U B M I T" class="input3">
+                </form>
+
+            </li>
+</section>
+
+
+
+</body>
+
+</html>

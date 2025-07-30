@@ -4,134 +4,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10월에 떠나는 단풍 여행</title>
+    <title>MyungHyun Web Portfolio</title>
 
-    <!--네이버 폰트 연결(나눔스퀘어:본문용, 나눔손글씨 붓:헤더 제목용)-->
-    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
-    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-brush.css" rel="stylesheet">
+    <!-- 네이버 웹폰트 연결(나눔스퀘어 네오) -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
 
-    <!--파비콘(즐겨찾기 아이콘)-->
-    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <!-- 구글 웹폰트 연결(Merienda) -->
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style/index.css" id="stylesheet">
+    <!-- 폰트어썸 연결 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"  />
+
+    <!-- 햄버거버튼 플러그인 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" rel="stylesheet">
+
+    <!-- 파비콘 연결 -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Slick Slider Plugin Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+
+      <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- 스타일 파일 연결 -->
+    <link rel="stylesheet" href="style/index.css">
 
 </head>
 
 
 <body>
-    
-    <div id="container">    <!--전체 박스-->
 
-        <header id="header">    <!--헤더(머릿말) 영역-->
-            <div id="headerBox">
-                <h1><img src="images/icon.png" alt="로고">어디로 떠나면 좋을까?</h1>
-                <p>10월에 떠나는 단풍 여행지를 소개합니다~</p>
+    <!--프리로딩(Preloading) 페이지 내용이 모두 읽혀지기 전까지 보여지는 내용-->
+    <div id="preloading">
+        <img src="images/1474.gif" alt="" id="preload">
+    </div>
+    
+        <div id="naviBox">    <!--내비게이션 전체 박스-->
+    
+            <nav id="navi">   <!--안쪽 1200 내비게이션 공간-->
+                <div id="logoBox"><a href="index.html"><img src="images/logo.png" alt="" id="logo"></a></div>
+    
+                <!-- 모바일용 햄버거 버튼 -->
+                <button class="hamburger hamburger--spin">
+                    <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+    
+                <ul id="menu" data-cursor="-color-purple">
+                    <li class="main"><a href="#header" class="mainLink">HOME</a></li>
+                    <li class="main"><a href="#about" class="mainLink">ABOUT</a></li>
+                    <li class="main"><a href="#portfolio" class="mainLink">PORTFOLIO</a></li>
+                    <li class="main"><a href="#contact" class="mainLink">CONTACT</a></li>
+                </ul>
+            </nav>
+    
+            <div id="subBack"></div>   <!--서브메뉴 뒤 전체 배경-->
+    
+        </div>    <!--내비게이션 전체 박스 끝-->
+
+        <!-- 모바일용 메뉴 뒤 배경 -->
+         <div id="blackBox"></div>
+
+
+
+        <header id="header" class="full">
+            <video src="media/background_1.mp4" autoplay  muted playsinline loop id="headerVideo"></video>
+            <img src="images/headerImage.jpg" alt="헤더 이미지" id="headerImage">
+
+            <div class="coverCaption" data-cursor="-opaque">   <!--가운데 타이틀 박스-->
+                <h1 class="sectionTitle">Design Portfolio Page</h1>
+                <h3 class="sectionTitle2"></h3>
             </div>
+
+        <!--Wave 영역-->
+        <div class="hero_area">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+            <!--Wave 영역 끝-->          
+
         </header>
 
 
-        <nav id="navi">     <!--내비게이션(메뉴) 영역-->
-            <ul id="menu">
-                <li class="main"><a href="1.html">단풍시기</a></li>
-                <li class="main"><a href="2.html">서울 단풍길 105선</a></li>
-                <li class="main"><a href="3.html">수도권</a></li>
-                <li class="main"><a href="4.html">지방</a></li>
-            </ul>
-        </nav>
+        
+        <section id="about">    <!--about(소개) 섹션-->
 
+            <div class="cover full parallax-background">    <!--표지용 박스-->
+                <div class="coverCaption">   <!--가운데 타이틀 박스-->
+                    <h1 class="sectionTitle"  data-aos="fade-right" data-aos-duration="600"  data-aos-offset="200">About JEONG MyungHyun</h1>
+                    <h3 class="subTitle"  data-aos="fadeleft" data-aos-duration="600"  data-aos-offset="200">Introduce UI-Designer</h3>
+                </div>
+            </div>
 
-        <section id="contents">     <!--섹션(본문) 영역-->
-            <h2 id="sectionTitle">단풍 시기</h2>
+            <div class="contents full">     <!--내용 박스-->
+                <h2 class="title_1" data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="300">ABOUT ME</h2>
 
-            <p class="text">북한지역을 제외하고 우리나라의 단풍 시작은 설악산을 기준으로 삼는 게 일반적인데 보통 설악산의 단풍이 시작 되었다는 것은 산정상 20% 정도가 단풍으로 물들기 시작 했을 때를 말하는 것으로 기상청의 예측도를 보니 올해도 9월 말경 설악산의 단풍을 시작으로 전국적으로 단풍이 물들어가기 시작해서 10월 말경에 전라남도 완도까지 단풍이 퍼지게 된다고 예측을 할 수 있다.</p>
-
-            <h3 class="smallTitle">강원도 설악산</h3>
-            <p class="text">가을이면 단풍, 단풍하면 설악산 아닐까요? 길이 가파르지 않아 초보자들도 쉽게 오를 수 있는 양폭대피소 코스, 설악산을 대표하는 단풍코스인 용소폭포 코스, 기암괴석과 단풍의 조화를 만끽할 수 있는 울산바위 코스(난이도 있는 편)를 추천합니다.</p>
-            <ul class="galleryBox">
-                <li class="list">
-                    <img src="images/mt001.jpg" alt="강원도 설악산" class="thumb">
-                    <img src="images/icon_gallery.png" alt="" class="icon">
-                </li>
-                <li class="list">
-                    <img src="images/mt002.jpg" alt="강원도 설악산" class="thumb">
-                    <img src="images/icon_gallery.png" alt="" class="icon">
-                </li>
-                <li class="list">
-                    <img src="images/mt003.jpg" alt="강원도 설악산" class="thumb">
-                    <img src="images/icon_gallery.png" alt="" class="icon">
-                </li>
-                <li class="list">
-                    <video src="videos/mountain01.mp4" controls  loop poster="videos/mountain01.jpg" class="video"></video>
-                    <img src="images/icon_video.png" alt="" class="icon">
-                </li>
-            </ul>
-
-            <!-- 구글지도 -->
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71016.78569148784!2d128.43837610816308!3d38.127909967794494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fd8a6b156172ecd%3A0xc3f60743db18b103!2z7ISk7JWF7IKw!5e0!3m2!1sko!2skr!4v1748320656618!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            <h3 class="smallTitle">정읍 내장산</h3>
-            <p class="text">조선 8경 중 하나인 내장산은 1971년 국립공원으로 지정되었어요. 내장산의 단풍터널(일주문-내장사)은 단풍 구경 명소로 많은 이들에게 오랫동안 사랑받아왔는데요. 케이블카를 타고 편하게 관람해도 좋지만, 이왕 산에 갔으니 금선폭포를 보고 돌아오는 가벼운 등산 코스(소요시간 약 1시간 50분)는 어떨까요?</p>
-            <ul class="galleryBox">
-                <li class="list">
-                    <img src="images/mt004.jpg" alt="정읍 내장산" class="thumb">
-                    <img src="images/icon_gallery.png" alt="" class="icon">
-                </li>
-                <li class="list">
-                    <img src="images/mt005.jpg" alt="정읍 내장산" class="thumb">
-                    <img src="images/icon_gallery.png" alt="" class="icon">
-                </li>
-                <li class="list">
-                    <img src="images/mt006.jpg" alt="정읍 내장산" class="thumb">
-                    <img src="images/icon_gallery.png" alt="" class="icon">
-                </li>
-                <li class="list">
-                    <video src="videos/mountain02.mp4" controls  loop poster="videos/mountain02.jpg" class="video"></video>
-                    <img src="images/icon_video.png" alt="" class="icon">
-                </li>
-            </ul>
-
-            <!-- 구글지도 -->
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61824.619419527!2d126.86883425693037!3d35.47320191627281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3571b96c9ebe8085%3A0x5ecd026213a99e4d!2z64K07J6l7IKw!5e0!3m2!1sko!2skr!4v1748321728667!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-
-            <h3 class="smallTitle">광주 무등산</h3>
-            <p class="text">가을이면 단풍, 단풍하면 설악산 아닐까요? 길이 가파르지 않아 초보자들도 쉽게 오를 수 있는 양폭대피소 코스, 설악산을 대표하는 단풍코스인 용소폭포 코스, 기암괴석과 단풍의 조화를 만끽할 수 있는 울산바위 코스(난이도 있는 편)를 추천합니다.</p>
-            <ul class="galleryBox">
-                <li class="list">
-                    <img src="images/mt007.jpg" alt="광주 무등산" class="thumb">
-                    <img src="images/icon_gallery.png" alt="" class="icon">
-                </li>
-                <li class="list">
-                    <img src="images/mt008.jpg" alt="광주 무등산" class="thumb">
-                    <img src="images/icon_gallery.png" alt="" class="icon">
-                </li>
-                <li class="list">
-                    <img src="images/mt009.jpg" alt="광주 무등산" class="thumb">
-                    <img src="images/icon_gallery.png" alt="" class="icon">
-                </li>
-                <li class="list">
-                    <video src="videos/mountain03.mp4" controls  loop poster="videos/mountain03.jpg" class="video"></video>
-                    <img src="images/icon_video.png" alt="" class="icon">
-                </li>
-            </ul>
-
-            <!-- 구글지도 -->
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52203.8650044361!2d126.92802978166323!3d35.138122308229136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3571f372de61dd35%3A0xede24cc93a333a0d!2z66y065Ox7IKw!5e0!3m2!1sko!2skr!4v1748321768904!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-            <a href="https://weather.go.kr" target="_blank" id="link">기상청 바로가기</a>
+                <ul id="listBox1">
+                    <li class="list1" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300">
+                        <img src="images/aboutImage2.jpg" alt="">
+                    </li>
+                    <li class="list1" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="300">
+                        <h3><i class="fa-regular fa-user"></i> Profile</h3>
+                        <p>이름: 정명현(JeongMyungHyun) <br>
+                                E-Mail: iamintern@naver.com <br>
+                                Work : Publisher, UI/UX Designer</p>
+                        <h3><i class="fa-regular fa-newspaper"></i> Education</h3>
+                        <p>2025년 2월 ~ 2025년  7월: 생성형AI(머신러닝)를 활용한 디지털 문화컨텐츠 제작</p>
+                        <h3><i class="fa-regular fa-rectangle-list"></i> License</h3>
+                        <p>운전면허 2종 보통, 사회복지사2급, GTQ 포토샵 1급<br>(취득예정)컴퓨터그래픽기능사, 웹디자인개발기능사</p>
+                        <h3><i class="fa-regular fa-object-group"></i> Skills</h3>
+                        <p>Illustrator, Photoshop, HTML5, CSS3
+                                Javascript, jQuery, Premiere, After Effect</p>
+                    </li>
+                </ul>
+            </div>
 
         </section>
 
 
-        <footer id="footer">    <!--푸터(꼬릿말) 영역-->
-            <p>Copyright by K-Weather all right by served <br>
-                    Contact by master@kweather.com</p>
-        </footer> 
+        
+    <section id="portfolio">    <!--protfolio(작업결과물) 섹션-->
 
-    </div>    <!--전체 박스 끝-->
+        <div class="cover full">    <!--표지용 박스-->
+                <div class="coverCaption" data-cursor="-opaque">   <!--가운데 타이틀 박스-->
+                    <h1 class="sectionTitle"  data-aos="fade-right" data-aos-duration="600"  data-aos-offset="200">My Portfolio</h1>
+                    <h3 class="subTitle"  data-aos="fade-left" data-aos-duration="600"  data-aos-offset="200">Portfolio Gallery(Design,Video,Web)</h3>
+                </div>
+        </div>
+
+        <div class="contents full">     <!--내용 박스-->
+            <h2 class="title_1" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">MY PORTFOLIO</h2>
+            <h3 class="title_2" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">A multidisciplinary designer and front-end developer.</h3>
+            <p class="caption" data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="300">I find inspiration in everyday experiences and enjoy turning them into thoughtful, user-centered digital creations.
+With a growth mindset, I constantly challenge myself to deliver better results with every project.</p>
+           
+           
+            <!-- Swiper -->
+            <div class="swiper mySwiper">       
+
+               <ul id="slideBox" class="swiper-wrapper" data-cursor-text="Click!">
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_graphic/thumb01.jpg" data-no="0" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_graphic/thumb02.jpg" data-no="1" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                   <li class="swiper-slide">
+                        <img src="portfolio_graphic/thumb03.jpg" data-no="2" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_graphic/thumb04.jpg" data-no="3" data-type="image" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_graphic/thumb05.jpg" data-no="4" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_graphic/thumb06.jpg" data-no="5" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_graphic/thumb07.jpg" data-no="6" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_graphic/thumb08.jpg" data-no="7" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_graphic/thumb09.jpg" data-no="8" data-type="image" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_graphic/thumb10.jpg" data-no="9" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_video/thumbvideo.jpg" data-no="10" data-type="video" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_web/thumb1.jpg" data-no="11" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_web/thumb2.jpg" data-no="12" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="portfolio_web/thumb3.jpg" data-no="13" data-type="image" alt="포트폴리오" class="thumb">
+                    </li>
+
+            </ul>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+                </div>
+        </div>
+    </section>
+
+        <!--모달 팝업용-->
+        <div id="modal">
+
+            <div id="modalBox">
+        
+                <div class="mList">
+                    <img src="portfolio_graphic/po1.jpg" alt="모달창 이미지" id="mimage">
+                    <video src="portfolio_video/povideo.mp4" muted playsinline id="mVideo"></video>
+                </div>
+
+                <div class="mList">
+                    <h2 id="mTitle">모달창 제목</h2>
+
+                    <h3 class="mTitle1">기획/설명</h3>
+                    <p id="mText1"></p><br>
+
+                    <h3 class="mTitle1">사용 프로그램</h3>
+                    <p id="mText2"></p><br>
+
+                    <h3 class="mTitle1">제작 기간, 참여도</h3>
+                    <p id="mText3"></p>
+
+
+        
+                </div>
+
+            </div>    <!--내부 박스 끝-->
+            
+            <i class="fa-solid fa-circle-xmark" id="mClose"></i>
+
+
+        </div>     <!--전체 박스 끝-->
+
+        <section id="contact">    <!--contact(연결) 섹션-->
+
+            <div class="cover full parallax-background">    <!--표지용 박스-->
+                <div class="coverCaption" data-cursor="-opaque">   <!--가운데 타이틀 박스-->
+                    <h1 class="sectionTitle"  data-aos="fade-right" data-aos-duration="600"  data-aos-offset="200">Contact Me</h1>
+                    <h3 class="subTitle"  data-aos="fade-left" data-aos-duration="600"  data-aos-offset="200">Contact to MyungHyun</h3>
+                </div>
+            </div>
+
+
+            <div class="contents full">     <!--내용 박스-->
+                <h2 class="title_1" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">CONTACT ME</h2>
+                <h3 class="title_2" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">Let's Connect!</h3>
+                <p class="caption" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">Have a question or an idea you'd like to collaborate on?
+Feel free to reach out — sometimes all it takes is one message to start something amazing.
+Looking forward to hearing from you!</p>
+
+                <ul id="listBox3">
+                    <li class="list3" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300">
+                        <!-- 인스타그램 위젯 삽입 -->
+                        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                        <div id="sns" class="elfsight-app-86e47968-ac40-410c-9463-a9d1c545b987" data-elfsight-app-lazy></div>
+                    </li>
+
+                    <li class="list3" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="300">
+                        <div>
+                            <a href="mailto:iamintern@naver.com" data-cursor="-color-red"><i class="fa-regular fa-envelope"></i>iamintern@naver.com</a>
+                        </div>
+
+                        <div>
+                            <a href="tel:010-9882-5571" data-cursor="-color-red"><i class="fa-solid fa-mobile-screen"></i>010-9882-5571</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <footer id="footer" class="section">
+            <div id="footerBox">
+                <img src="images/logo.png" alt="">
+                <p>&copy;Copyright by Jin-Jeong. Allright by reserved<br>
+                Contacty by iamintern@naver.com</p>
+            </div>
+        </footer>
+
+
+        <!-- Top 버튼 -->
+        <i class="fa-solid fa-circle-up" id="top"></i>
+    
+
+    <!-- 제이쿼리 라이브러리 연결(사용 준비) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--Aos Plugin(스크롤 애니메이션 효과)--> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" ></script>    
+
+    <!-- easeScroll 플러그인(부드러운 스크롤 효과) -->
+    <script src="script/jquery.easeScroll.js"></script>
+
+    <!-- easing 플러그인(애니메이션 속도 변화용) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+   <!--Typed.js 플러그인-->
+   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>    
+
+    <!--smoothScroll Plugin(한 페이지 내에서 링크. 부드러운 스크롤 효과)--> 
+    <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js" ></script>
+    
+    <!-- Swiper Slider 플러그인(슬라이드) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- jQParallax 플러그인(시간차 스크롤 효과) -->
+    <script src="script/jQ-parallax.js"></script>
+
+    <!-- fancyCursor 플러그인(마우스 커저 스타일) -->
+    <!-- <script src="script/fancyCursor.js"></script> -->
+
+    <!--Scrollify Plugin(Snap Scroll 효과)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>    
+
+    <!-- Ripple 플러그인(물결잔상 효과) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js" ></script>    
+
+    <!-- 스크립트 파일 연결 -->
+    <script src="script/index.js"></script> 
 
 </body>
+
+ 
 
 </html>
